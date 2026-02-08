@@ -1,8 +1,8 @@
 package az.developia.student_management.dto;
 
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,8 +23,7 @@ public class StudentRequestDto {
 	@Email(message = "Email duzgun formatda deyil")
 	private String email;
 
-	@NotBlank(message = "Yas bos ola bilmez")
-	@Pattern(regexp = "1[8-9]|[2-9][0-9]", message = "Yas minimum 18 olmalidir")
-	private String age;
+	@Min(value = 18, message = "Yas 18-den kicik ola bilmez")
+	private Integer age;
 
 }

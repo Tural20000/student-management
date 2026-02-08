@@ -27,7 +27,7 @@ public class Student {
 	private String name;
 	private String surname;
 	private String email;
-	private String age;
+	private Integer age;
 	@CreationTimestamp
 	private LocalDateTime created_at;
 

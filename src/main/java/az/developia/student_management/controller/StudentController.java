@@ -20,7 +20,9 @@ import az.developia.student_management.dto.StudentResponseDto;
 import az.developia.student_management.exception.MyValidationException;
 import az.developia.student_management.service.StudentService;
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @RestController
 @RequestMapping(value = "/api/students")
 public class StudentController {
@@ -29,6 +31,7 @@ public class StudentController {
 
 	@GetMapping
 	public List<StudentResponseDto> getAllStudents() {
+		log.info("Info: XML konfiqurasiyası işləyir!");
 		return service.getAllStudents();
 	}
 
@@ -50,6 +53,7 @@ public class StudentController {
 
 	@GetMapping("/{id}")
 	public StudentResponseDto getStudentById(@PathVariable Long id) {
+		log.info("Info: XML konfiqurasiyası işləyir!");
 		return service.getStudentById(id);
 	}
 
