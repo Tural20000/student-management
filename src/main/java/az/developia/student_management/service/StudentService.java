@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import az.developia.student_management.dto.StudentRequestDto;
@@ -11,7 +12,9 @@ import az.developia.student_management.dto.StudentResponseDto;
 import az.developia.student_management.entity.Student;
 import az.developia.student_management.exception.StudentNotFoundException;
 import az.developia.student_management.repository.StudentRepository;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Service
 public class StudentService {
 	@Autowired
@@ -61,7 +64,9 @@ public class StudentService {
 		repository.deleteById(id);
 	}
 
+	@Cacheable(value = "users", key = "#id")
 	public StudentResponseDto getStudentById(Long id) {
+		log.info("DB-dən tələbə gətirilir: ID {}", id);
 		Student student = repository.findById(id)
 				.orElseThrow(() -> new StudentNotFoundException("Bu ID-li telebe tapilmadi:ID = " + id));
 		StudentResponseDto dto = new StudentResponseDto();
