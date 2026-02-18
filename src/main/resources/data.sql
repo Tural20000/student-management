@@ -6,3 +6,20 @@ insert into students(name,surname,email,age,created_at) values
 
 insert into students(name,surname,email,age,created_at) values
 ('Aygun','Isayeva','isayeva000@gmail.com',19,CURRENT_TIMESTAMP);
+
+
+INSERT INTO roles (name) VALUES ( 'ROLE_GET');
+INSERT INTO roles (name) VALUES ( 'ROLE_ADD');
+INSERT INTO roles (name) VALUES ( 'ROLE_UPDATE');
+INSERT INTO roles (name) VALUES ( 'ROLE_DELETE');
+
+INSERT INTO users (username, password) VALUES ( 'tural', '$2a$12$C33n/2Zdv6jrAMUarmFzeeIge05ucn2CyxkqLGxBH5HXYPfwrTQIe');
+INSERT INTO users (username, password) VALUES (  'james', '$2a$12$s3cW/xAFN4eyKxjt9fTLqudLj8bICFax5TlV6glv2ieXblpHWUTam');
+
+INSERT INTO user_roles (user_id, role_id) VALUES (1, 1);
+INSERT INTO user_roles (user_id, role_id) VALUES (1, 2);
+INSERT INTO user_roles (user_id, role_id) VALUES (1, 3);
+INSERT INTO user_roles (user_id, role_id) VALUES (1, 4);
+
+INSERT INTO user_roles (user_id, role_id) VALUES (2, 1);
+INSERT INTO user_roles (user_id, role_id) VALUES (2, 2);
