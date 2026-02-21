@@ -403,3 +403,6 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 2026-02-18 16:11:59 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2026-02-18 16:11:59 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
 2026-02-18 16:11:59 [restartedMain] INFO  a.d.s.StudentManagementApplication - Started StudentManagementApplication in 12.634 seconds (process running for 13.438)
+2026-02-18 16:18:53 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-18 16:18:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-18 16:18:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 22 ms
