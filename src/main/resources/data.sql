@@ -13,7 +13,7 @@ INSERT INTO roles (name) VALUES ( 'ROLE_ADD');
 INSERT INTO roles (name) VALUES ( 'ROLE_UPDATE');
 INSERT INTO roles (name) VALUES ( 'ROLE_DELETE');
 
-INSERT INTO users (username, password) VALUES ( 'tural', '$2a$12$C33n/2Zdv6jrAMUarmFzeeIge05ucn2CyxkqLGxBH5HXYPfwrTQIe');
+INSERT INTO users (username, password) VALUES ( 'u1', '$2a$12$wLp7GP/z8aLks/C6PXaGxeMmjGHGFhbMlL9Ux61J5vYaKat48UTsm');
 INSERT INTO users (username, password) VALUES (  'james', '$2a$12$s3cW/xAFN4eyKxjt9fTLqudLj8bICFax5TlV6glv2ieXblpHWUTam');
 
 INSERT INTO user_roles (user_id, role_id) VALUES (1, 1);
