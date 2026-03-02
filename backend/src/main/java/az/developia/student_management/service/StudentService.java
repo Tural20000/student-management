@@ -53,6 +53,7 @@ public class StudentService {
 		response.setSurname(savedStudent.getSurname());
 		response.setAge(savedStudent.getAge());
 		response.setEmail(savedStudent.getEmail());
+		response.setCreated_at(savedStudent.getCreated_at());
 
 		return response;
 
@@ -76,6 +77,7 @@ public class StudentService {
 		dto.setSurname(student.getSurname());
 		dto.setAge(student.getAge());
 		dto.setEmail(student.getEmail());
+		dto.setCreated_at(student.getCreated_at());
 
 		return dto;
 	}
@@ -94,6 +96,7 @@ public class StudentService {
 		dto.setSurname(updateStudent.getSurname());
 		dto.setEmail(updateStudent.getEmail());
 		dto.setAge(updateStudent.getAge());
+		dto.setCreated_at(updateStudent.getCreated_at());
 
 		return dto;
 	}
