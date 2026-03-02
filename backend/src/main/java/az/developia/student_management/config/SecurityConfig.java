@@ -13,6 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfigurationSource;
 
 import az.developia.student_management.filters.JwtAuthenticationFilter;
 import az.developia.student_management.service.UserDetailsServiceImpl;
@@ -25,14 +26,19 @@ public class SecurityConfig {
 	private final JwtAuthenticationFilter jwtAuthenticationFilter;
 	private final UserDetailsServiceImpl userDetailsService;
 
-	public SecurityConfig(JwtAuthenticationFilter jwtAuthenticationFilter, UserDetailsServiceImpl userDetailsService) {
+	private final CorsConfigurationSource corsConfigurationSource;
+
+	public SecurityConfig(JwtAuthenticationFilter jwtAuthenticationFilter, UserDetailsServiceImpl userDetailsService,
+			CorsConfigurationSource corsConfigurationSource) {
 		this.jwtAuthenticationFilter = jwtAuthenticationFilter;
 		this.userDetailsService = userDetailsService;
+		this.corsConfigurationSource = corsConfigurationSource;
 	}
 
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		http.csrf().disable()
+		http.cors(cors -> cors.configurationSource(corsConfigurationSource))
+				.csrf().disable()
 				.authorizeHttpRequests(authorizeRequests -> authorizeRequests.requestMatchers(HttpMethod.OPTIONS, "/**")
 						.permitAll().requestMatchers(HttpMethod.POST, "/apis/login").permitAll()
 						.requestMatchers("/h2-console/**").permitAll()

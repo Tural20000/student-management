@@ -31,6 +31,7 @@ public class StudentService {
 			dto.setAge(s.getAge());
 			dto.setSurname(s.getSurname());
 			dto.setEmail(s.getEmail());
+			dto.setCreated_at(s.getCreated_at());
 
 			dtos.add(dto);
 

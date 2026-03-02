@@ -13,8 +13,8 @@ INSERT INTO roles (name) VALUES ( 'ROLE_ADD');
 INSERT INTO roles (name) VALUES ( 'ROLE_UPDATE');
 INSERT INTO roles (name) VALUES ( 'ROLE_DELETE');
 
-INSERT INTO users (username, password) VALUES ( 'u1', '$2a$12$wLp7GP/z8aLks/C6PXaGxeMmjGHGFhbMlL9Ux61J5vYaKat48UTsm');
-INSERT INTO users (username, password) VALUES (  'james', '$2a$12$s3cW/xAFN4eyKxjt9fTLqudLj8bICFax5TlV6glv2ieXblpHWUTam');
+INSERT INTO users (username, password) VALUES ( 'admin', '$2a$12$WUQQkZFL5ZHO0LCUNVvdkugoHWruktM7RdJi.eLNiA5Gpkc7KODbu');
+INSERT INTO users (username, password) VALUES (  'u2', '$2a$12$.QOp/RM/H75Y76Kct6pM6effcHVzy0VVkMTHWKmJdWmv.e7E0ahf6');
 
 INSERT INTO user_roles (user_id, role_id) VALUES (1, 1);
 INSERT INTO user_roles (user_id, role_id) VALUES (1, 2);
@@ -23,3 +23,5 @@ INSERT INTO user_roles (user_id, role_id) VALUES (1, 4);
 
 INSERT INTO user_roles (user_id, role_id) VALUES (2, 1);
 INSERT INTO user_roles (user_id, role_id) VALUES (2, 2);
+INSERT INTO user_roles (user_id, role_id) VALUES (2, 3);
+INSERT INTO user_roles (user_id, role_id) VALUES (2, 4);

@@ -1,6 +1,7 @@
 package az.developia.student_management.dto;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,5 +21,6 @@ public class StudentResponseDto implements Serializable {
 	private String surname;
 	private String email;
 	private Integer age;
+	private LocalDateTime created_at;
 
 }
