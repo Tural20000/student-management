@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext.jsx';
 import RegisterModal from './components/RegisterModal.jsx';
 import LoginModal from './components/LoginModal.jsx';
@@ -6,9 +6,17 @@ import StudentTable from './components/StudentTable.jsx';
 import './App.css';
 
 function AppContent() {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, preferLogin, clearPreferLogin } = useAuth();
   const [showRegister, setShowRegister] = useState(true);
   const [showLogin, setShowLogin] = useState(false);
+
+  useEffect(() => {
+    if (!isAuthenticated && preferLogin) {
+      clearPreferLogin();
+      setShowRegister(false);
+      setShowLogin(true);
+    }
+  }, [isAuthenticated, preferLogin, clearPreferLogin]);
 
   const handleRegisterSuccess = () => {
     setShowRegister(false);

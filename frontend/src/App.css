@@ -14,29 +14,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: #000000;
   padding: 1rem;
 }
 
 .auth-card {
-  background: white;
+  background: #111111;
+  border: 1px solid #222;
   border-radius: 16px;
   padding: 2.5rem;
   max-width: 420px;
   width: 100%;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .auth-card h1 {
   margin: 0 0 0.5rem;
   font-size: 1.75rem;
-  color: #1a1a2e;
+  color: #fff;
   text-align: center;
 }
 
 .auth-card .subtitle {
   margin: 0 0 1.5rem;
-  color: #64748b;
+  color: #a0a0a0;
   text-align: center;
   font-size: 0.95rem;
 }
@@ -45,13 +46,13 @@ body {
   margin: 1rem 0 0;
   text-align: center;
   font-size: 0.9rem;
-  color: #64748b;
+  color: #a0a0a0;
 }
 
 .link-btn {
   background: none;
   border: none;
-  color: #4a90d9;
+  color: #5ea3ff;
   font-weight: 600;
   cursor: pointer;
   padding: 0;
@@ -59,5 +60,5 @@ body {
 }
 
 .link-btn:hover {
-  color: #357abd;
+  color: #7ab8ff;
 }

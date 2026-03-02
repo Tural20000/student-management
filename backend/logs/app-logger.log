@@ -427,3 +427,70 @@
 2026-03-02 16:48:21 [http-nio-8050-exec-6] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
 2026-03-02 16:48:36 [http-nio-8050-exec-5] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
 2026-03-02 16:48:36 [http-nio-8050-exec-6] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 16:53:43 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-02 16:53:43 [Thread-20] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-02 16:53:43 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8050"]
+2026-03-02 16:53:43 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-02 16:53:43 [Thread-20] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8050"]
+2026-03-02 16:53:43 [Thread-20] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-02 16:53:44 [Thread-20] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-03-02 16:53:44 [Thread-20] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2026-03-02 16:53:44 [Thread-20] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2026-03-02 16:53:44 [restartedMain] INFO  a.d.s.StudentManagementApplication - Starting StudentManagementApplication using Java 21.0.8 with PID 3840 (C:\GitHub\student-management\backend\target\classes started by Tural in C:\GitHub\student-management\backend)
+2026-03-02 16:53:44 [restartedMain] INFO  a.d.s.StudentManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-02 16:53:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-02 16:53:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-02 16:53:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+2026-03-02 16:53:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-02 16:53:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-02 16:53:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.student_management.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-02 16:53:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.student_management.repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-02 16:53:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface az.developia.student_management.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-02 16:53:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2026-03-02 16:53:45 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8050 (http)
+2026-03-02 16:53:45 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8050"]
+2026-03-02 16:53:45 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-02 16:53:45 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-03-02 16:53:45 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-02 16:53:45 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 948 ms
+2026-03-02 16:53:45 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-02 16:53:45 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-02 16:53:45 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-02 16:53:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2026-03-02 16:53:45 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:studentdb user=SA
+2026-03-02 16:53:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2026-03-02 16:53:45 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-02 16:53:45 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-02 16:53:45 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-02 16:53:45 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-02 16:53:45 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-03-02 16:53:46 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:studentdb'
+2026-03-02 16:53:46 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-03-02 16:53:46 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8050"]
+2026-03-02 16:53:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8050 (http) with context path '/'
+2026-03-02 16:53:46 [restartedMain] INFO  a.d.s.StudentManagementApplication - Started StudentManagementApplication in 2.099 seconds (process running for 1666.169)
+2026-03-02 16:53:46 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-02 16:54:43 [http-nio-8050-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-02 16:54:43 [http-nio-8050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-02 16:54:43 [http-nio-8050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-02 16:54:46 [http-nio-8050-exec-6] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 16:54:47 [http-nio-8050-exec-7] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 16:56:59 [http-nio-8050-exec-2] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 16:56:59 [http-nio-8050-exec-4] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:00:13 [http-nio-8050-exec-3] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:00:14 [http-nio-8050-exec-8] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:00:17 [http-nio-8050-exec-6] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:00:20 [http-nio-8050-exec-9] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:00:31 [http-nio-8050-exec-1] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:00:34 [http-nio-8050-exec-4] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:00:34 [http-nio-8050-exec-2] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:00:34 [http-nio-8050-exec-5] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:01:15 [http-nio-8050-exec-2] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:01:15 [http-nio-8050-exec-5] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
