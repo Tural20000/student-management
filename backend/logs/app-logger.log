@@ -736,3 +736,16 @@ insert into students(name,surname,email,age,created_at) values ('Tural','Abdulla
 2026-03-02 17:16:31 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-03-02 17:16:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-03-02 17:16:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-02 17:44:33 [http-nio-8050-exec-1] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-02 17:44:33 [http-nio-8050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-02 17:44:33 [http-nio-8050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 23 ms
+2026-03-02 17:44:33 [http-nio-8050-exec-4] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:44:33 [http-nio-8050-exec-7] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:53:38 [http-nio-8050-exec-9] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:53:38 [http-nio-8050-exec-9] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:53:38 [http-nio-8050-exec-3] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:53:38 [http-nio-8050-exec-1] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:56:24 [http-nio-8050-exec-2] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:56:24 [http-nio-8050-exec-6] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:56:25 [http-nio-8050-exec-10] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
+2026-03-02 17:56:25 [http-nio-8050-exec-9] INFO  a.d.s.controller.StudentController - Info: XML konfiqurasiyası işləyir!
