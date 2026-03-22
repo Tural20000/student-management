@@ -36,10 +36,7 @@ public class RegistrationController {
 		user.setUsername(authRequest.getUsername());
 		user.setPassword(passwordEncoder.encode(authRequest.getPassword()));
 
-		java.util.Set<RoleEntity> roles = new java.util.HashSet<>();
-		for (long i = 1; i <= 4; i++) {
-			roleRepository.findById(i).ifPresent(roles::add);
-		}
+		java.util.Set<RoleEntity> roles = new java.util.HashSet<>(roleRepository.findAll());
 		user.setRoles(roles);
 
 		userRepository.save(user);

@@ -1,7 +1,6 @@
 package az.developia.student_management.service;
 
 import java.util.Collection;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +11,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import az.developia.student_management.entity.RoleEntity;
 import az.developia.student_management.entity.UserEntity;
+import az.developia.student_management.repository.RoleRepository;
 import az.developia.student_management.repository.UserRepository;
 
 @Service
@@ -22,16 +21,21 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	@Autowired
 	private UserRepository userRepository;
 
+	@Autowired
+	private RoleRepository roleRepository;
+
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		UserEntity user = userRepository.findByUsername(username)
 				.orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
+		// Bütün istifadəçilərə sistemdəki bütün rollar verilir (JWT və @PreAuthorize üçün)
 		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
-				mapRolesToAuthorities(user.getRoles()));
+				mapAllRolesToAuthorities());
 	}
 
-	private Collection<? extends GrantedAuthority> mapRolesToAuthorities(Set<RoleEntity> roles) {
-		return roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
+	private Collection<? extends GrantedAuthority> mapAllRolesToAuthorities() {
+		return roleRepository.findAll().stream().map(role -> new SimpleGrantedAuthority(role.getName()))
+				.collect(Collectors.toList());
 	}
 }

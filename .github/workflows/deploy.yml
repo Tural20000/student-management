@@ -1,0 +1,46 @@
+name: CI/CD Student Management
+
+on:
+  push:
+    branches: [ main ] # Əgər branch adın fərqlidirsə (məs: master), onu yaz
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build JAR with Maven
+        run: mvn clean package -DskipTests
+        working-directory: ./backend
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/student-app:latest .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/student-app:latest
+        working-directory: ./backend
+
+      - name: Deploy to Server via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /root/student-management/backend
+            docker compose pull
+            docker compose up -d
+            docker image prune -f
